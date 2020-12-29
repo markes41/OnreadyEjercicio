@@ -9,17 +9,17 @@ import models.Car;
 public class CarAction {
 	
 	public void DrawContent(Car car1, Car car2, Car car3, Car car4) {
-		System.out.println("Marca: "+car1.getMarca()+" // Modelo: "+car1.getModelo()+
-				" // Puertas: "+car1.getPuertas()+" // Precio: $"+car1.getPrecio());
+		Car[] cars = new Car[] {car1, car2, car3, car4};
 		
-		System.out.println("Marca: "+car2.getMarca()+" // Modelo: "+car2.getModelo()+
-				" // Cilindrada: "+car2.getCilindrada()+" // Precio: $"+car2.getPrecio());
+		for(int i = 0; i < 4; i++) {
+			if(cars[i].getCilindrada().equals("")) 
+				System.out.println("Marca: "+cars[i].getMarca()+" // Modelo: "+cars[i].getModelo()+
+						" // Puertas: "+cars[i].getPuertas()+" // Precio: $"+cars[i].getPrecio());
+			else
+				System.out.println("Marca: "+cars[i].getMarca()+" // Modelo: "+cars[i].getModelo()+
+						" // Cilindrada: "+cars[i].getCilindrada()+" // Precio: $"+cars[i].getPrecio());
+		}
 		
-		System.out.println("Marca: "+car3.getMarca()+" // Modelo: "+car3.getModelo()+
-				" // Puertas: "+car3.getPuertas()+" // Precio: $"+car3.getPrecio());
-		
-		System.out.println("Marca: "+car4.getMarca()+" // Modelo: "+car4.getModelo()+
-				" // Cilindrada: "+car4.getCilindrada()+" // Precio: $"+car4.getPrecio());
 	}
 	
 	public void HighLowContains(Car car1, Car car2, Car car3, Car car4) {
